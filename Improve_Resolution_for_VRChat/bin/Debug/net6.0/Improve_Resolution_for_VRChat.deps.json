@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Improve_Resolution_for_VRChat/1.0.0": {
+        "runtime": {
+          "Improve_Resolution_for_VRChat.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Improve_Resolution_for_VRChat/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

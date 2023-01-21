@@ -1,0 +1,15 @@
+D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\Improve_Resolution_for_VRChat.deps.json
+D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\Improve_Resolution_for_VRChat.dll
+D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\Improve_Resolution_for_VRChat.pdb
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.csproj.AssemblyReference.cache
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.AssemblyInfoInputs.cache
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.AssemblyInfo.cs
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.csproj.CoreCompileInputs.cache
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.dll
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\refint\Improve_Resolution_for_VRChat.dll
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.pdb
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\ref\Improve_Resolution_for_VRChat.dll
+D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\Improve_Resolution_for_VRChat.exe
+D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\Improve_Resolution_for_VRChat.runtimeconfig.json
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.genruntimeconfig.cache

@@ -1,11 +1,9 @@
 ﻿#if UNITY_EDITOR
-
 using SRTTbacon.VRCScript;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using Improve_Resolution_for_VRChat;
 using System.Reflection;
 
 namespace Assets.SRTTbacon.Editor
@@ -20,7 +18,6 @@ namespace Assets.SRTTbacon.Editor
         private int Setting_Index = 0;
         private int Crunch_Value = 50;
         private bool IsLoaded = false;
-        private bool IsError = false;
         private bool IsCrunchMode = true;
         private bool IsExecuted = false;
         [MenuItem("SRTTbacon/テクスチャ解像度向上")]
@@ -100,7 +97,6 @@ namespace Assets.SRTTbacon.Editor
             if (IsCrunchMode)
                 Crunch_Value = EditorGUILayout.IntSlider("圧縮品質(デフォルト50)", Crunch_Value, 0, 100);
             EditorGUILayout.Space(12f);
-            //実行できる状態か判定。実行不可であればボタンを押せないように
             if (!IsCanExecute(out string Error_Message))
                 EditorGUI.BeginDisabledGroup(true);
             if (GUILayout.Button("実行"))
@@ -129,7 +125,9 @@ namespace Assets.SRTTbacon.Editor
                     if (From_Tex != null && To_Tex != null)
                     {
                         object[] args = new object[2] { 0, 0 };
+#pragma warning disable UNT0018 // System.Reflection features in performance critical messages
                         MethodInfo method = typeof(TextureImporter).GetMethod("GetWidthAndHeight", BindingFlags.NonPublic | BindingFlags.Instance);
+#pragma warning restore UNT0018 // System.Reflection features in performance critical messages
                         method.Invoke(To_Tex, args);
                         int Width = (int)args[0];
                         int Height = (int)args[1];
@@ -178,8 +176,6 @@ namespace Assets.SRTTbacon.Editor
             Error_Message = "";
             if (IsExecuted)
                 Error_Message = "処理が完了しました。もう一度実行する場合はウィンドウを閉じてください。";
-            else if (IsError)
-                Error_Message = "エラー:" + Main_Code.Error_Message;
             else if (!File.Exists(Execute_File))
                 Error_Message = "Improve_Resolution_for_VRChat.exeが存在しません。";
             else if (!File.Exists(Execute_Dir + "\\Improve_Resolution_for_VRChat.dll"))
@@ -226,7 +222,6 @@ namespace Assets.SRTTbacon.Editor
         }
         private void Execute_FixTexture()
         {
-            IsError = false;
             IsExecuted = false;
             string From_Files = "";
             foreach (string Texture_File in Texture_List)

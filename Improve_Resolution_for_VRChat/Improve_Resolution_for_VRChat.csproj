@@ -7,4 +7,8 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp.Web" Version="2.0.2" />
+  </ItemGroup>
+
 </Project>

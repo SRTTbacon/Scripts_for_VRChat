@@ -13,3 +13,7 @@ D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\ref\Improve_Resolutio
 D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\Improve_Resolution_for_VRChat.exe
 D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\Improve_Resolution_for_VRChat.runtimeconfig.json
 D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.genruntimeconfig.cache
+D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\SixLabors.ImageSharp.dll
+D:\Projects\Improve_Resolution_for_VRChat\bin\Debug\net6.0\SixLabors.ImageSharp.Web.dll
+D:\Projects\Improve_Resolution_for_VRChat\obj\Debug\net6.0\Improve_Resolution_for_VRChat.csproj.CopyComplete

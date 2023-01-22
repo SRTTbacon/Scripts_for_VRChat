@@ -20,12 +20,13 @@ namespace Improve_Resolution_for_VRChat
                 To_File = to_File;
                 Format = format;
                 Mode = mode;
+                this.IsCopyOnly = IsCopyOnly;
             }
         }
         public static string? Error_Message { get; private set; }
         private static readonly List<Queue> Queues = new();
         private static string? Special_Path = "";
-        private static async void Main(string[] args)
+        private static void Main(string[] args)
         {
             if (args.Length == 0)
             {
@@ -79,7 +80,8 @@ namespace Improve_Resolution_for_VRChat
                     }
                     Now_Mode--;
                 }
-                Queues.Add(new Queue(From_Files[i], To_File, Path.GetExtension(From_Files[i]).Replace(".", ""), Now_Mode));
+                image.Dispose();
+                Queues.Add(new Queue(From_Files[i], To_File, Path.GetExtension(From_Files[i]).Replace(".", ""), Now_Mode, IsCopyOnly));
             }
             bool HasError = false;
             bool IsComplete = false;
@@ -92,6 +94,13 @@ namespace Improve_Resolution_for_VRChat
                         Error_Message = "画像ファイルが存在しませんでした。";
                         HasError = true;
                         break;
+                    }
+                    if (q.IsCopyOnly)
+                    {
+                        Console.WriteLine("'" + Path.GetFileName(q.From_File) + "'は既に8K以上の解像度なためスキップしました。");
+                        Console.WriteLine();
+                        File.Copy(q.From_File, q.To_File, true);
+                        continue;
                     }
                     Console.WriteLine("'" + Path.GetFileName(q.From_File) + "'の高解像度化を開始します...");
                     Console.Write("処理しています...");
